@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #eff1f3;
+  background-color: #272727;
+
+}
+
+ul {
+    list-style: none;
+}
+
+header .carousel-inner .item {
+  height: 100vh;
+}
+header .carousel-inner .item img {
+  width: 100%;
+}
+.carousel-caption {
+  margin-bottom: 280px;
+  background-color: #272727;
+  opacity: 0.7;
+}
+.carousel-caption h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.carousel-control.right {
+  background-image: none;
+}
+.carousel-control.left {
+  background-image: none;
+}
+
+.teaminfo {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    padding-bottom: 1%;
+    color: #009fb7;
+}
+
+.icon {
+    padding-left: 1.5px;
+    display: inline-block;
+    max-width:20px;
+    max-height:20px;
+}
+
+.card-title {
+    font-style: italic;
+    font-size: 17px; }
+
+
+.row {
+  width: 80%;
+  margin: auto;
+}
+
+.card { 
+  width: 100%;
+  margin: auto;
+}
+
+.row img {
+  width: 100%;
+}
+
+
+
+a:hover 
+{ text-decoration: none; 
+}
+
+
+
+
+.brands {
+    justify-content: center;
+    color: #009fb7;
+    font-weight: bold;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    text-align: center;
+  
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: space-evenly;
+}
+
