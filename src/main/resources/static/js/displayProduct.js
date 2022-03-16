@@ -1,10 +1,19 @@
-// gpu = row1
-// cpu = row2
+// gpu = row0
+// cpu = row1
 
 const gpu = new Product();
 const cpu = new Product();
 
 // >> name, description, image, price, sold, quantity
+/* 
+id: 
+name: varchar(45)
+description: varchar(200)
+imageUrl: varchar(200)
+price: double
+sold: int
+quantity: int
+*/
 
 gpu.addProduct(
   "Asus GTX 3090",
