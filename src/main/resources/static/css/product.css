@@ -1,0 +1,44 @@
+* {
+  background-color: #272727;
+  color: #eff1f3;
+}
+
+.navbar {
+  background-color: #272727;
+  color: #eff1f3;
+}
+
+/* set body bg-color to remove whitespace*/
+body {
+  background-color: #272727;
+}
+
+.card {
+  background-color: #272727;
+  color: #eff1f3;
+}
+
+.container {
+  background-color: #272727;
+  color: #eff1f3;
+}
+
+/* Set images to same dimensions */
+.card > img {
+  height: auto;
+  max-height: 200px;
+  width: auto;
+}
+
+/* navbar css */
+.navbar-custom {
+  background: var(--primary-matt-grey) !important;
+}
+
+.navbar-brand {
+  color: var(--primary-yellow) !important;
+}
+
+.nav-link {
+  color: var(--secondary-white) !important;
+}
