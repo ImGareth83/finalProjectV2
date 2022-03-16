@@ -10,7 +10,7 @@ import sg.com.mices.entity.Item;
 import sg.com.mices.service.ItemService;
 
 @Controller
-@RequestMapping("/items")
+@RequestMapping("/files")
 public class ItemController {
 
     private ItemService itemService;
