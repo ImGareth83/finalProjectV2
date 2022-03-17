@@ -49,6 +49,7 @@ gpu.addProduct(
   "8 available"
 );
 
+// display gpu
 gpu.displayProduct(0, "gpu");
 
 cpu.addProduct(
@@ -84,4 +85,5 @@ cpu.addProduct(
   "1 available"
 );
 
+// display cpu
 cpu.displayProduct(1, "cpu");
