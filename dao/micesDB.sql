@@ -37,6 +37,8 @@ CREATE TABLE `Items` (
   `imageUrl` varchar(200) NOT NULL,
   `price` double NOT NULL,
   `style` varchar(200) NOT NULL,
+  `sold` int NOT NULL,
+  `quantity` int NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
