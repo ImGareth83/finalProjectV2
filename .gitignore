@@ -1,7 +1,7 @@
 HELP.md
 MicesDB.mwb.bak
 .DS_Store
-application-properties
+src/main/resources/application.properties
 
 .gradle
 build/
