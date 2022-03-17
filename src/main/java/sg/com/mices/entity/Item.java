@@ -1,5 +1,4 @@
 package sg.com.mices.entity;
-
 import sg.com.mices.controller.dto.ItemDTO;
 
 import javax.persistence.*;
@@ -9,15 +8,29 @@ import javax.persistence.*;
 public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Only for MySQL, it doesnt support database sequence
-    private Integer id, sold, quantity;
+    private Integer id;
+    private Integer sold, quantity;
     private String name,description,imageUrl;
     private Double price;
+
+    public Item() {}
+
+    public Item(ItemDTO itemDTO)
+    {
+        //Transfer the object (with the data) to Entity Class for mapping with the
+        // database table columns and to be able to save the data in the columns
+        this.name = itemDTO.getName();
+        this.description = itemDTO.getDescription();
+        this.imageUrl = itemDTO.getImageUrl();
+        this.price = itemDTO.getPrice();
+        this.sold = itemDTO.getSold();
+        this.quantity = itemDTO.getQuantity();
+    }
 
 
     public Integer getId() {
         return id;
     }
-
     public void setId(Integer id) {
         this.id = id;
     }
