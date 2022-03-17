@@ -8,6 +8,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class MvcConfig  implements WebMvcConfigurer {
 
+    @Value("${image.folder}")
+    private String imageFolder; //now imageFolder variable the value = productimages
+
+
     public void addViewControllers(ViewControllerRegistry registry) {
         //Map the browser's URL to a specific View (HTML) inside resources/templates directory
         registry.addViewController("/").setViewName("index");
@@ -23,5 +27,12 @@ public class MvcConfig  implements WebMvcConfigurer {
                 .addResourceLocations("classpath:/static/")
                 .setCachePeriod(0);
     }
+
+    //expose the productimages folder to allow external client to access the files from the server
+    Path uploadDir = Paths.get(imageFolder);
+    String uploadPath = uploadDir.toFile().getAbsolutePath();
+        registry.addResourceHandler("/" + imageFolder + "/**").addResourceLocations("file:" + uploadPath + "/").setCachePeriod(0);
+
+
 
 }

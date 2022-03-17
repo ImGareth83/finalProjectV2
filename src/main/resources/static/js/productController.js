@@ -85,23 +85,10 @@ const displayItemDetail = (item) => {
 
   document.querySelector("#itemName").innerText = item.name;
   document.querySelector("#itemDescription").innerText = item.description;
-  document.querySelector("#itemImage").src = item.image;
+  document.querySelector("#itemImage").src = item.imageUrl;
   document.querySelector("#itemPrice").innerText = item.price;
   document.querySelector("#itemSold").innerText = item.sold;
   document.querySelector("#itemQuantity").innerText = item.quantity;
 
-  // let rowId = "";
-  // for (let rowIndex = 0; rowIndex < 2; rowIndex++) {
-  //   rowId = "#row" + rowIndex;
-  //   console.log(rowId);
 
-  //   document.querySelector(`${rowId} > #itemName`).innerText = item.name;
-  //   document.querySelector(`${rowId} > #itemDescription`).innerText =
-  //     item.description;
-  //   document.querySelector(`${rowId} > #itemImage`).src = item.image;
-  //   document.querySelector(`${rowId} > #itemPrice`).innerText = item.price;
-  //   document.querySelector(`${rowId} > #itemSold`).innerText = item.sold;
-  //   document.querySelector(`${rowId} > #itemQuantity`).innerText =
-  //     item.quantity;
-  // }
 };
