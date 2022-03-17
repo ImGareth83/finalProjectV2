@@ -54,15 +54,16 @@ public class ItemController {
 
     @CrossOrigin
     @DeleteMapping( "/{id}" )
-    public void delete( @PathVariable Integer id )
+    public void delete( @PathVariable Item item )
     {
-        itemService.delete( id );
+        itemService.delete( item );
     }
 
     // to-edit-later
     @CrossOrigin
     @PostMapping("/add")
-    public void save(  @RequestParam(name="name", required = true) String name,
+    public void save(  @RequestParam(name="id", required = true) int id,
+                       @RequestParam(name="name", required = true) String name,
                        @RequestParam(name="description", required = true) String description,
                        @RequestParam(name="imageUrl", required = true) String imageUrl,
                        @RequestParam(name="price", required = true) double price,
@@ -74,7 +75,7 @@ public class ItemController {
         FileUploadUtil.saveFile(imageFolder, fileName, multipartFile);
 
         String fullPath = imageFolder + '/' + imageUrl;
-        ItemDTO itemDto = new ItemDTO(name, description, fullPath, price, sold, quantity);
+        ItemDTO itemDto = new ItemDTO(id, name, description, fullPath, price, sold, quantity);
         itemService.save(new Item(itemDto));
     }
 

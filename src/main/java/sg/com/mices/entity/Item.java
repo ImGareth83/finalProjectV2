@@ -1,5 +1,7 @@
 package sg.com.mices.entity;
 
+import sg.com.mices.controller.dto.ItemDTO;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,9 +9,10 @@ import javax.persistence.*;
 public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Only for MySQL, it doesnt support database sequence
-    private Integer id;
-    private String name,description,imageUrl,style;
+    private Integer id, sold, quantity;
+    private String name,description,imageUrl;
     private Double price;
+
 
     public Integer getId() {
         return id;
@@ -17,6 +20,22 @@ public class Item {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getSold() {
+        return sold;
+    }
+
+    public void setSold(Integer sold) {
+        this.sold = sold;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 
     public String getName() {
@@ -43,14 +62,6 @@ public class Item {
         this.imageUrl = imageUrl;
     }
 
-    public String getStyle() {
-        return style;
-    }
-
-    public void setStyle(String style) {
-        this.style = style;
-    }
-
     public Double getPrice() {
         return price;
     }
@@ -66,7 +77,6 @@ public class Item {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
-                ", style='" + style + '\'' +
                 ", price=" + price +
                 '}';
     }
