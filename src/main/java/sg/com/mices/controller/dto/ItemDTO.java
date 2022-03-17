@@ -2,7 +2,7 @@ package sg.com.mices.controller.dto;
 
 public class ItemDTO {
 
-    private int id;
+
     private String name;
     private String description;
     private String imageUrl;
@@ -10,9 +10,9 @@ public class ItemDTO {
     private int sold;
     private int quantity;
 
-    public ItemDTO( int id, String name, String description, String imageUrl, double price, int sold, int quantity )
+    public ItemDTO( String name, String description, String imageUrl, double price, int sold, int quantity )
     {
-        this.id = id;
+
         this.name = name;
         this.description = description;
         this.imageUrl = imageUrl;
@@ -21,13 +21,7 @@ public class ItemDTO {
         this.quantity = quantity;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
