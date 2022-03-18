@@ -9,9 +9,9 @@ public class ItemDTO {
     private double price;
     private int sold;
     private int quantity;
+    private String style;
 
-    public ItemDTO( String name, String description, String imageUrl, double price, int sold, int quantity )
-    {
+    public ItemDTO(String name, String description, String imageUrl, double price, int sold, int quantity, String style) {
 
         this.name = name;
         this.description = description;
@@ -19,8 +19,8 @@ public class ItemDTO {
         this.price = price;
         this.sold = sold;
         this.quantity = quantity;
+        this.style = style;
     }
-
 
 
     public String getName() {
@@ -69,6 +69,14 @@ public class ItemDTO {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public String getStyle() {
+        return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
     }
 }
 

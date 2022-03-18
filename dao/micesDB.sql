@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.28, for macos11 (x86_64)
 --
--- Host: localhost    Database: micesDB
+-- Host: localhost    Database: micesdb
 -- ------------------------------------------------------
 -- Server version	8.0.28
 
@@ -16,21 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `micesDB`
+-- Table structure for table `items`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `micesDB` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
-
-USE `micesDB`;
-
---
--- Table structure for table `Items`
---
-
-DROP TABLE IF EXISTS `Items`;
+DROP TABLE IF EXISTS `items`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Items` (
+CREATE TABLE `items` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `description` varchar(200) NOT NULL,
@@ -40,17 +32,17 @@ CREATE TABLE `Items` (
   `sold` int NOT NULL,
   `quantity` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Items`
+-- Dumping data for table `items`
 --
 
-LOCK TABLES `Items` WRITE;
-/*!40000 ALTER TABLE `Items` DISABLE KEYS */;
-INSERT INTO `Items` VALUES (29,'Cat Tee Black T-Shirt','4 MSL','productImages/images/t-shirt1.jpg',20,'Black with custom print'),(30,'Dark Thug Blue-Navy T-Shirt','Thug Blue-Navy','productImages/images/t-shirt2.png',10,'Front print and paisley print'),(31,'Sphynx Tie Dye Wine T-Shirt','GPX Poly 1','productImages/images/t-shirt3.png',80,'Front tie dye print'),(32,'Skuul','Training 2014','productImages/images/t-shirt4.jpg',140,'Black T-Shirt with front print'),(33,'Wine Skul T-Shirt','Skul T-Shirt','productImages/images/t-shirt5.png',13,'Wine'),(34,'update1','aaa','productImages/image/t-shirt1.jpg',10,'aaa'),(35,'Cat Tee Black T-Shirt','4 MSL','productImages/images/t-shirt1.jpg',20,'Black with custom print'),(36,'Dark Thug Blue-Navy T-Shirt','Thug Blue-Navy','productImages/images/t-shirt2.png',10,'Front print and paisley print'),(37,'Sphynx Tie Dye Wine T-Shirt','GPX Poly 1','productImages/images/t-shirt3.png',80,'Front tie dye print'),(38,'Skuul','Training 2014','productImages/images/t-shirt4.jpg',140,'Black T-Shirt with front print'),(39,'Wine Skul T-Shirt','Skul T-Shirt','productImages/images/t-shirt5.png',13,'Wine'),(40,'update1','aaa','productImages/images/t-shirt1.jpg',10,'aaa');
-/*!40000 ALTER TABLE `Items` ENABLE KEYS */;
+LOCK TABLES `items` WRITE;
+/*!40000 ALTER TABLE `items` DISABLE KEYS */;
+INSERT INTO `items` VALUES (29,'Cat Tee Black T-Shirt','4 MSL','imgs/products/amd3200G.jpg',20,'Black with custom print',0,0),(30,'Dark Thug Blue-Navy T-Shirt','Thug Blue-Navy','imgs/products/amd5600G.jpg',10,'Front print and paisley print',0,0),(31,'Sphynx Tie Dye Wine T-Shirt','GPX Poly 1','imgs/products/amd5700G.jpg',80,'Front tie dye print',0,0),(32,'Skuul','Training 2014','imgs/products/amd5950x.jpg',140,'Black T-Shirt with front print',0,0),(33,'Wine Skul T-Shirt','Skul T-Shirt','imgs/products/asusGTX3090.jpg',13,'Wine',0,0),(34,'update1','aaa','imgs/products/evgaGTX3090.jpg',10,'aaa',0,0),(35,'Cat Tee Black T-Shirt','4 MSL','imgs/products/gigabyteGTX3090.jpg',20,'Black with custom print',0,0),(36,'Dark Thug Blue-Navy T-Shirt','Thug Blue-Navy','imgs/products/msiGTX3090.jpg',10,'Front print and paisley print',0,0),(37,'Sphynx Tie Dye Wine T-Shirt','GPX Poly 1','productImages/images/t-shirt3.png',80,'Front tie dye print',0,0),(38,'Skuul','Training 2014','productImages/images/t-shirt4.jpg',140,'Black T-Shirt with front print',0,0),(39,'Wine Skul T-Shirt','Skul T-Shirt','productImages/images/t-shirt5.png',13,'Wine',0,0),(40,'update1','aaa','productImages/images/t-shirt1.jpg',10,'aaa',0,0),(46,'aaa','ddd','bb',123,'ccc',0,0);
+/*!40000 ALTER TABLE `items` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -94,7 +86,7 @@ CREATE TABLE `users` (
   `role` varchar(45) NOT NULL,
   `enabled` tinyint DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,4 +108,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-10 18:27:57
+-- Dump completed on 2022-03-18  9:44:07

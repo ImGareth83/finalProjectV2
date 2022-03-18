@@ -2,6 +2,8 @@ HELP.md
 MicesDB.mwb.bak
 .DS_Store
 src/main/resources/application.properties
+upload-dir
+upload-dir/**
 
 .gradle
 build/

@@ -28,6 +28,13 @@ public class ItemController {
     }
 
     @CrossOrigin
+    @GetMapping("/form")
+    public String form(Model m) {
+        m.addAttribute("newItem", new Item());
+        return "form";
+    }
+
+    @CrossOrigin
     @GetMapping("/list")
     public String findAll(Model m) {
         m.addAttribute("items", itemService.findAll());
@@ -56,20 +63,22 @@ public class ItemController {
     // to-edit-later
     @CrossOrigin
     @PostMapping("/add")
-    public void save(@RequestParam(name = "name", required = true) String name,
-                     @RequestParam(name = "description", required = true) String description,
-                     @RequestParam(name = "imageUrl", required = true) String imageUrl,
-                     @RequestParam(name = "price", required = true) double price,
-                     @RequestParam(name = "sold", required = true) int sold,
-                     @RequestParam(name = "quantity", required = true) int quantity,
-                     @RequestParam("imagefile") MultipartFile multipartFile) throws IOException {
+    public String save(@RequestParam(name = "name", required = true) String name,
+                       @RequestParam(name = "description", required = true) String description,
+                       @RequestParam(name = "price", required = true) double price,
+                       @RequestParam(name = "sold", required = true) int sold,
+                       @RequestParam(name = "quantity", required = true) int quantity,
+                       @RequestParam(name = "style", required = true) String style,
+                       @RequestParam("imagefile") MultipartFile multipartFile) throws IOException {
 
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         FileUploadUtil.saveFile(imageFolder, fileName, multipartFile);
 
-        String fullPath = imageFolder + '/' + imageUrl;
-        ItemDTO itemDto = new ItemDTO(name, description, fullPath, price, sold, quantity);
+        String fullPath = imageFolder + '/' + fileName;
+        ItemDTO itemDto = new ItemDTO(name, description, fullPath, price, sold, quantity, style);
         itemService.save(new Item(itemDto));
+
+        return "redirect:/files/form";
     }
 
 
