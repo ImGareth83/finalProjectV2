@@ -10,7 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @Configuration
-public class MvcConfig  implements WebMvcConfigurer {
+public class MvcConfig implements WebMvcConfigurer {
 
     @Value("${image.folder}")
     private String imageFolder;
@@ -24,6 +24,10 @@ public class MvcConfig  implements WebMvcConfigurer {
         registry.addViewController("/product").setViewName("product");
         registry.addViewController("/form").setViewName("form");
         registry.addViewController("/login").setViewName("login");
+        registry.addViewController("/logout").setViewName("index");
+        registry.addViewController("/403").setViewName("403");
+
+
     }
 
     @Override
@@ -40,9 +44,6 @@ public class MvcConfig  implements WebMvcConfigurer {
                 .addResourceLocations("file:" + uploadPath + "/")
                 .setCachePeriod(0);
     }
-
-
-
 
 
 }
