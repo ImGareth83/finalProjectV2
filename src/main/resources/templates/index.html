@@ -7,14 +7,16 @@
   <title>MICE, a eCommerce for Computer Parts</title>
 
   <!--add css here-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+
 
   <!--add javascript here -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <!--<script src="./js/javascript.js" defer></script> -->
+
 
 </head>
 <body>
@@ -25,11 +27,7 @@
   <div th:insert="fragments/navbar.html :: navbar"></div>
   <!-- end - Navbar section-->
 
-  <!--
-      ///////////////////////
-      start - saleCarousel
-      ///////////////////////
-  -->
+  <!--Start of Carousel Items-->
 
   <div id="saleCarouselControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -53,101 +51,116 @@
     </button>
   </div>
 
-  <!--
-      ///////////////////////
-      end - saleCarousel
-      ///////////////////////
-  -->
+  <!---end of Carousel -->
 
-  <!--
-      ///////////////////////
-      start - productFeatures
-      ///////////////////////
-  -->
+  <!--start - GBU CPU section-->
 
-  <div class="row g-4 py-5 row-cols-1 row-cols-lg-2 text-center">
-    <div class="feature col">
-      <h2>GBU</h2>
-      <img class="d-block w-100" src="/imgs/features/gbu-1.jpeg" alt="laptop features">
-      <a href="#" class="cta-btn">
-        Shop Now
-      </a>
-    </div>
-    <div class="feature col text-center">
-      <h2>CPU</h2>
-      <img class="d-block w-100" src="/imgs/features/cpu-1.png" alt="desktop features">
-      <a href="#" class="link-light cta-btn">
-        Shop Now
-      </a>
-    </div>
-  </div>
+  <div class="jumbotron jumbotron-fluid">
 
-  <!--
-      ///////////////////////
-      end - productFeatures
-      ///////////////////////
-  -->
+      <div class="row g-3">
 
-  <!--
-  ///////////////////////
-  start - advantage section
-  ///////////////////////
-  -->
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="card">
+            <h2 class="card-title">GBU</h2>
+            <img src="/imgs/features/gbu-1.jpeg" class="class-img-top">
+            <div class="card-body">
 
-  <div class="container text-center">
-    <h2 class="py-4 text-center">Our <span class="text-danger">Promise</span></h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card bg-black text-white">
-          <div class="card-body">
-            <img src="/imgs/features/freeShipping.png" alt="free shipping image" class="d-block w-50 mx-auto mt-4 mb-4">
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.</p>
+              <a th:href="@{product}" class="link-light cta-btn">
+                Shop Now
+              </a>
+            </div>
           </div>
+
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-black text-white">
-          <div class="card-body">
-            <img src="/imgs/features/freeReturn.png" alt="free returns" class="d-block w-50 mx-auto mt-4 mb-4">
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.</p>
+
+
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="card">
+            <h2 class="card-title">CPU</h2>
+            <img src="/imgs/features/cpu-1.png" class="class-img-top">
+            <div class="card-body">
+
+              <a th:href="@{product}" class="link-light cta-btn">
+                Shop Now
+              </a>
+            </div>
           </div>
+
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-black text-white">
-          <div class="card-body">
-            <img src="/imgs/features/24Support.png" alt="24 7 support" class="d-block w-50 mx-auto mt-4 mb-4">
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.</p>
-          </div>
-        </div>
+
+
       </div>
     </div>
-
 
   </div>
 
-  <!--
-  ///////////////////////
-  end - advantage section
-  ///////////////////////
-  -->
+
+  <!-----end - GBU CPU section -->
+
+  <!--Promises Section----->
+
+
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Our Promise</h1>
+
+      <div class="row g-3">
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="imgs/index/freeship.png" class="class-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Free Shipping</h5>
+            <p class="card-text">Free shipping applicable for all orders in Singapore. No minimums or coupons required.</p>
+          </div>
+        </div>
+
+      </div>
+
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="imgs/index/returns.png" class="class-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Free Returns</h5>
+              <p class="card-text">Not satisfied with your purchase? Arrange for a free return within 7 days upon receipt of your items</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="imgs/index/custsupport.png" class="class-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Customer Support</h5>
+              <p class="card-text">Reach out to us should you require any recommendations or have questions. We aim to respond to all enquiries within 1 working day,</p>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+      </div>
+
+    </div>
+  </div>
 
 
 
 
 
-  <!--
-  ///////////////////////
-  start - Footer section
-  ///////////////////////
-  -->
 
 
 
 
 
+<!----start of footer--->
 
 <div th:insert="fragments/footer.html :: footer"></div>
+<!---end of footer--->
 
 </body>
 </html>

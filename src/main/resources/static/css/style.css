@@ -1,44 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Lexend+Deca:wght@400;500;600;700;800;900&display=swap');
 
 @import "reset.css";
-@import "navbar.css";
 @import "button.css";
 
-:root {
-  /* _typography */
 
-  --primary-matt-grey: hsl(0, 0%, 0%);
-  --primary-yellow: hsl(45, 26%, 55%);
-  --primary-cyan: hsl(188, 100%, 36%);
-
-  --secondary-grey: hsl(250, 6%, 43%);
-  --secondary-transparent-grey: hsla(250, 6%, 43%, 0.75);
-  --secondary-transparent-slight-grey: hsla(250, 6%, 43%, 0.6);
-
-  --secondary-white: hsl(210, 14%, 95%);
-  --secondary-transparent-white: hsla(210, 10%, 95%, 0.75);
-  --secondary-transparent-slight-white: hsla(0, 0%, 100%, 0.6);
-
-  --light-paragraph: "Inter", sans-serif;
-  --dark-paragraph: "Lexend Deca", sans-serif;
-
-  /* layouts */
-  --very-small: 320px;
-  --small-breakpoint: 480px;
-  --medium-breakpoint: 720px;
-  --large-breakpoint: 960px;
-  --wide-breakpoint: 1200px;
+* {
+  background-color: #272727;
+  color: #eff1f3;
 }
 
-/* Set core root defaults */
-html {
-  font-size: 62.5%;
+body {
+  background-color: #272727;
+
 }
 
-body { 
-  background: var(--primary-matt-grey); 
+
+.container {
+  background-color: #272727;
+  color: #eff1f3;
 }
 
 h2{
-  color: var(--secondary-white);
+  color: #fff;
+  margin-top: 2px;
 }
+
+ .display-4
+        {
+            padding-bottom: 2%;
+            text-align: center;
+            color: 	#009FB8;
+        }
+
+
+ .card
+ {
+    max-width: 90%;
+    margin: auto;
+    border: none;
+    background-color: #272727;
+    padding-bottom: 5%;
+
+ }
+
