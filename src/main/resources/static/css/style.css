@@ -20,6 +20,10 @@ body {
   color: #eff1f3;
 }
 
+.card-title {
+    margin-top: 4%;
+}
+
 h2{
   color: #fff;
   margin-top: 2px;
@@ -41,5 +45,10 @@ h2{
     background-color: #272727;
     padding-bottom: 5%;
 
+ }
+
+ .card > img {
+   max-height: 400px;
+   width: auto;
  }
 
