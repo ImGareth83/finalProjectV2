@@ -29,6 +29,7 @@ public class ItemServiceTest {
 
     @BeforeAll
     public void setUp() {
+        Assertions.assertNotNull(itemRepository);
         itemService = new ItemService(itemRepository);
 
     }
@@ -58,9 +59,18 @@ public class ItemServiceTest {
         Assertions.assertNull(result.getId());
     }
 
-    @Test
     @DisplayName("Test should pass and returns a list of items")
-    public void shouldFindAll() {
+    @ParameterizedTest
+    @CsvFileSource(resources = "/add.csv", numLinesToSkip = 1)
+    public void shouldFindAll(String name, String description, String imageUrl, String style, double price) {
+        Item i = new Item();
+        i.setName(name);
+        i.setDescription(description);
+        i.setImageUrl(imageUrl);
+        i.setStyle(style);
+        i.setPrice(price);
+        entityManager.persist(i);
+
         List<Item> result = itemService.findAll();
         Assertions.assertNotNull(result);
         Assertions.assertFalse(result.isEmpty());

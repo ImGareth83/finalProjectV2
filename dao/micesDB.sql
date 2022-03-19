@@ -29,8 +29,8 @@ CREATE TABLE `items` (
   `imageUrl` varchar(200) NOT NULL,
   `price` double NOT NULL,
   `style` varchar(200) NOT NULL,
-  `sold` int NOT NULL,
-  `quantity` int NOT NULL,
+  `quantity` int DEFAULT NULL,
+  `sold` int DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -41,7 +41,7 @@ CREATE TABLE `items` (
 
 LOCK TABLES `items` WRITE;
 /*!40000 ALTER TABLE `items` DISABLE KEYS */;
-INSERT INTO `items` VALUES (29,'Cat Tee Black T-Shirt','4 MSL','imgs/products/amd3200G.jpg',20,'Black with custom print',0,0),(30,'Dark Thug Blue-Navy T-Shirt','Thug Blue-Navy','imgs/products/amd5600G.jpg',10,'Front print and paisley print',0,0),(31,'Sphynx Tie Dye Wine T-Shirt','GPX Poly 1','imgs/products/amd5700G.jpg',80,'Front tie dye print',0,0),(32,'Skuul','Training 2014','imgs/products/amd5950x.jpg',140,'Black T-Shirt with front print',0,0),(33,'Wine Skul T-Shirt','Skul T-Shirt','imgs/products/asusGTX3090.jpg',13,'Wine',0,0),(34,'update1','aaa','imgs/products/evgaGTX3090.jpg',10,'aaa',0,0),(35,'Cat Tee Black T-Shirt','4 MSL','imgs/products/gigabyteGTX3090.jpg',20,'Black with custom print',0,0),(36,'Dark Thug Blue-Navy T-Shirt','Thug Blue-Navy','imgs/products/msiGTX3090.jpg',10,'Front print and paisley print',0,0),(37,'Sphynx Tie Dye Wine T-Shirt','GPX Poly 1','productImages/images/t-shirt3.png',80,'Front tie dye print',0,0),(38,'Skuul','Training 2014','productImages/images/t-shirt4.jpg',140,'Black T-Shirt with front print',0,0),(39,'Wine Skul T-Shirt','Skul T-Shirt','productImages/images/t-shirt5.png',13,'Wine',0,0),(40,'update1','aaa','productImages/images/t-shirt1.jpg',10,'aaa',0,0),(46,'aaa','ddd','bb',123,'ccc',0,0);
+INSERT INTO `items` VALUES (29,'Cat Tee Black T-Shirt','4 MSL','imgs/products/amd3200G.jpg',20,'Black with custom print',0,0),(30,'Dark Thug Blue-Navy T-Shirt','Thug Blue-Navy','imgs/products/amd5600G.jpg',10,'Front print and paisley print',0,0),(31,'Sphynx Tie Dye Wine T-Shirt','GPX Poly 1','imgs/products/amd5700G.jpg',80,'Front tie dye print',0,0),(32,'Skuul','Training 2014','imgs/products/amd5950x.jpg',140,'Black T-Shirt with front print',0,0),(33,'Wine Skul T-Shirt','Skul T-Shirt','imgs/products/asusGTX3090.jpg',13,'Wine',0,0),(34,'update1','aaa','imgs/products/evgaGTX3090.jpg',10,'aaa',0,0),(35,'Cat Tee Black T-Shirt','4 MSL','imgs/products/gigabyteGTX3090.jpg',20,'Black with custom print',0,0),(36,'Dark Thug Blue-Navy T-Shirt','Thug Blue-Navy','imgs/products/msiGTX3090.jpg',10,'Front print and paisley print',0,0),(37,'Sphynx Tie Dye Wine T-Shirt','GPX Poly 1','productImages/images/t-shirt3.png',80,'Front tie dye print',0,0),(38,'Skuul','Training 2014','productImages/images/t-shirt4.jpg',140,'Black T-Shirt with front print',0,0),(39,'Wine Skul T-Shirt','Skul T-Shirt','productImages/images/t-shirt5.png',13,'Wine',0,0),(40,'update1','aaa','productImages/images/t-shirt1.jpg',10,'aaa',0,0),(46,'aaa','ddd','bb',123,'ccc',0,0),(47,'mmm','mmm','imgs/upload//t-shirt_new.jpg',9,'mmm',9,9),(48,'nnn','nnn','imgs/upload//t-shirt_new.jpg',9,'nnn',9,9),(49,'bbb','bbb','imgs/upload//t-shirt_new.jpg',9,'bbb',9,9),(50,'kkk','kkk','imgs/upload//t-shirt_new.jpg',9,'kkk',9,9),(51,'hhh','hhh','imgs/upload//t-shirt_new.jpg',9,'hhh',9,9),(52,'yyy','yyy','imgs/upload//t-shirt_new.jpg',9,'yyy',9,9),(53,'ggg','ggg','upload-dir/git-github-20211-cheatsheet.pdf',4,'ggg',4,4);
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +60,7 @@ CREATE TABLE `items_has_users` (
   KEY `fk_items_has_users_items_idx` (`items_id`),
   CONSTRAINT `fk_items_has_users_items` FOREIGN KEY (`items_id`) REFERENCES `items` (`id`),
   CONSTRAINT `fk_items_has_users_users1` FOREIGN KEY (`users_user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -86,7 +86,7 @@ CREATE TABLE `users` (
   `role` varchar(45) NOT NULL,
   `enabled` tinyint DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -108,4 +108,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-18  9:44:07
+-- Dump completed on 2022-03-19 15:17:41
