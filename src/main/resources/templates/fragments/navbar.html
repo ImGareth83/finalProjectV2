@@ -20,6 +20,7 @@
             <!-- margin right - push items to the right -->
             <li class="nav-item active"><a class="nav-link" th:href="@{index}"> HOME </a></li>
             <li class="nav-item "><a class="nav-link" th:href="@{abtus}"> ABOUT </a></li>
+            <li class="nav-item "><a class="nav-link" th:href="@{product}"> PRODUCTS PAGE </a></li>
             <li class="nav-item"><a class="nav-link" th:href="@{files/list}"> PRODUCTS </a></li>
             <div sec:authorize="isAuthenticated()">
                 <form id="logOut" th:action="@{/logout}" method="post">
