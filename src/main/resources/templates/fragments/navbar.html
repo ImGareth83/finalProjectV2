@@ -5,38 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Title</title>
-    <link rel="stylesheet" href="css/navigate.css"/>
+
+
+    <link href="css/button.css" rel="stylesheet">
 </head>
 <body>
-<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark ">
-    <a class="navbar-brand" th:href="@{/index}"><img th:src="@{/imgs/logo/micey.png}"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <!-- margin right - push items to the right -->
-            <li class="nav-item active"><a class="nav-link" th:href="@{/index}"> HOME </a></li>
-            <li class="nav-item "><a class="nav-link" th:href="@{/abtus}"> ABOUT </a></li>
-            <li class="nav-item "><a class="nav-link" th:href="@{/product}"> PRODUCTS PAGE </a></li>
-            <li class="nav-item"><a class="nav-link" th:href="@{files/list}"> PRODUCTS </a></li>
-            <div sec:authorize="isAuthenticated()">
-                <form id="logOut" th:action="@{/logout}" method="post">
-                    <li class="nav-item"><a class="nav-link" onclick="document.getElementById('logOut').submit();"> LOG
-                        OUT </a></li>
-                </form>
-            </div>
-            <div sec:authorize="isAnonymous()">
-                <li class="nav-item"><a class="nav-link" th:href="@{login}"> LOG IN </a></li>
-            </div>
-        </ul>
+<nav th:fragment="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #22222;">
+    <div class="container-fluid">
+        <a class="navbar-brand" th:href="@{/index}"><img th:src="@{/imgs/logo/micey.png}"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" style="margin-bottom: 1%;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"  th:href="@{/index}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/abtus}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/product}">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/files/list}">Product</a>
+                </li>
+
+                <div sec:authorize="isAuthenticated()">
+                    <form id="logOut" th:action="@{/logout}" method="post">
+                        <li class="nav-item"><a class="nav-link" onclick="document.getElementById('logOut').submit();"> LOG
+                            OUT </a></li>
+                    </form>
+                </div>
+
+                <div sec:authorize="isAnonymous()">
+                    <li class="nav-item"><a class="nav-link" th:href="@{login}"> Log in</a></li>
+                </div>
+
+            </ul>
+
+        </div>
     </div>
-
-
 </nav>
+
 </body>
-<script src="/js/nav.js"></script>
+
 </html>
+
 

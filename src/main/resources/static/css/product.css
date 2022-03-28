@@ -65,7 +65,7 @@ background: #009FB8;
            height: 500px; /* You must set a specified height */
            background-position: center; /* Center the image */
            background-repeat: no-repeat; /* Do not repeat the image */
-           margin-bottom: 30px;
+           margin-bottom: 5%;
          }
 
        .li-banner-text
@@ -85,28 +85,27 @@ background: #009FB8;
 
      .login
          {
-           overflow: hidden;
            background-color: #696969;
            color: black;
            padding: 40px 30px 30px 30px;
            border-radius: 10px;
-           margin: auto;
-           width: 400px;
-           opacity: 60%;
+           margin: 0 auto;
+           width: 350px;
+           justify-content: center;
+
          }
 
-       input[type=text] {
-         background-color: #fff;
-         color: black;
-         margin-bottom: 3px;
 
-       }
+.form-floating
+{
+    padding: 5px;
+}
 
-        input[type=password]
-        {
-         background-color: #fff;
-         color: black;
+.sub
+{
+ padding-bottom: 5px;
+}
 
-              }
+
 
   /* END OF CSS FOR LOGIN PAGE */

@@ -3,14 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
 <body>
-<div th:fragment="footer" class="container my-5">
-    <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-        <div class="container">
-            <p class="navbar-text pull-left">© 2022 Mice | Contact Us: hello@mice.com.sg</p>
+
+
+    <!-- Footer -->
+    <footer th:fragment="footer" class="text-center text-white" style="background-color: #22222; width: 100%;">
+        <!-- Grid container -->
+
+
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="mailto:hello@mice.com.sg">MICE PTE LTD</a>
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button"
+            ><i class="fab fa-facebook-f"></i
+            ></a>
+
+
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.twitter.com/" role="button"
+            ><i class="fab fa-twitter"></i
+            ></a>
+
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/" role="button"
+            ><i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button"
+            ><i class="fab fa-instagram"></i
+            ></a>
         </div>
-    </div>
+
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
 </div>
+<!-- End of .container -->
 </body>
 </html>

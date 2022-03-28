@@ -7,6 +7,7 @@
 * {
   background-color: #272727;
   color: #eff1f3;
+
 }
 
 body {
@@ -20,13 +21,9 @@ body {
   color: #eff1f3;
 }
 
-.card-title {
-    margin-top: 4%;
-}
-
 h2{
   color: #fff;
-  margin-top: 2px;
+  margin-top: 2%;
 }
 
  .display-4
@@ -48,7 +45,8 @@ h2{
  }
 
  .card > img {
-   max-height: 400px;
+   height: auto;
+   max-height: 450px;
    width: auto;
  }
 
