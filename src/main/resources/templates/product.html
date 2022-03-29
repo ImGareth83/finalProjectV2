@@ -75,11 +75,10 @@
             <div class="modal-body">
                 <img id="itemImage" src="" class="card-img-top" alt="Product Item Image"/>
                 <hr/>
-                <p><b>Description:</b><span id="itemDescription"> Dummy Item Description</span></p>
-                <br/>
-                <p><b>Price:</b><span id="itemPrice"> 66666</span></p>
-                <p><b>Sold:</b><span id="itemSold"> Dummy Item Sold</span></p>
-                <p><b>Available:</b><span id="itemQuantity"> Dummy Item Quantity</span></p>
+                <p><b>Description: </b><span id="itemDescription"> Dummy Item Description</span></p>
+                <p><b>Price: </b><span id="itemPrice"> 66666</span></p>
+                <p><b>Sold: </b><span id="itemSold"> Dummy Item Sold</span></p>
+                <p><b>Available: </b><span id="itemQuantity"> Dummy Item Quantity</span></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -88,6 +87,11 @@
     </div>
     <!-- End Of Modal Popup  -->
 </div>
+
+<!----start of footer--->
+
+<div th:insert="fragments/footer.html :: footer"></div>
+<!---end of footer--->
 
 
 <script th:inline="javascript">
