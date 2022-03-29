@@ -45,26 +45,26 @@
       <div class="text-center text-white mx-auto">
           <h1>Username</h1>
           <form th:action="@{/files/add}" th:object="${newItem}" method="post" enctype="multipart/form-data">
-              <label for="name">Item Name:</label>
-              <input type="text" th:field="*{name}" id="name" placeholder="Name" required>
+              <p><label for="name">Item Name:</label>
+              <input type="text" th:field="*{name}" id="name" placeholder="Name" required></p>
 
-              <label for="description"><br>Description:</label>
-              <input type="text" th:field="*{description}" id="description" placeholder="Description" required>
+              <p><label for="description"><br>Description:</label>
+              <input type="text" th:field="*{description}" id="description" placeholder="Description" required></p>
 
-              <label for="price">Enter Price:</label>
-              <input type="text" th:field="*{price}" id="price" placeholder="Enter Price" required>
+            <p><label for="price">Enter Price:</label>
+              <input type="text" th:field="*{price}" id="price" placeholder="Enter Price" required></p>
 
-              <label for="style">Enter Style</label>
-              <input type="text" th:field="*{style}" id="style" placeholder="Enter Style" required>
+              <p><label for="style">Enter Style</label>
+              <input type="text" th:field="*{style}" id="style" placeholder="Enter Style" required></p>
 
-            <label for="quantity">Enter Quantity</label>
-            <input type="text" th:field="*{quantity}" id="quantity" placeholder="Enter Quantity" required>
+            <p><label for="quantity">Enter Quantity</label>
+            <input type="text" th:field="*{quantity}" id="quantity" placeholder="Enter Quantity" required></p>
 
-            <label for="sold">Enter Sold</label>
-            <input type="text" th:field="*{sold}" id="sold" placeholder="Enter Sold" required>
+            <p><label for="sold">Enter Sold</label>
+            <input type="text" th:field="*{sold}" id="sold" placeholder="Enter Sold" required></p>
 
-              <label for="choosenFile">Upload Image:</label>
-              <input type="file" id="choosenFile" name="imagefile" placeholder="Choosen File" required>
+              <p><label for="choosenFile">Upload Image:</label>
+              <input type="file" id="choosenFile" name="imagefile" placeholder="Choosen File" required></p>
 
               <button type="submit" class="btn btn-secondary">Submit</button>
           </form>
