@@ -14,14 +14,16 @@
 <nav th:fragment="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #22222;">
     <div class="container-fluid">
         <a class="navbar-brand" th:href="@{/index}"><img th:src="@{/imgs/logo/micey.png}"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" style="margin-bottom: 1%;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"
+                style="margin-bottom: 1%;">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page"  th:href="@{/index}">Home</a>
+                    <a class="nav-link active" aria-current="page" th:href="@{/index}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{/abtus}">About</a>
@@ -32,12 +34,13 @@
 
                 <div sec:authorize="isAuthenticated()">
                     <form id="logOut" th:action="@{/logout}" method="post">
-                        <li class="nav-item"><a class="nav-link" onclick="document.getElementById('logOut').submit();"> Log Out</a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="document.getElementById('logOut').submit();">
+                            Log Out</a></li>
                     </form>
                 </div>
 
                 <div sec:authorize="isAnonymous()">
-                    <li class="nav-item"><a class="nav-link" th:href="@{login}"> Log in</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/login}"> Log in</a></li>
                 </div>
 
             </ul>
