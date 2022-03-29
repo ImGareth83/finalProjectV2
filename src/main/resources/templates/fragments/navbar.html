@@ -27,16 +27,12 @@
                     <a class="nav-link" th:href="@{/abtus}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/product}">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{files/list}">Product</a>
+                    <a class="nav-link" th:href="@{files/list}">Shop</a>
                 </li>
 
                 <div sec:authorize="isAuthenticated()">
                     <form id="logOut" th:action="@{/logout}" method="post">
-                        <li class="nav-item"><a class="nav-link" onclick="document.getElementById('logOut').submit();"> LOG
-                            OUT </a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="document.getElementById('logOut').submit();"> Log Out</a></li>
                     </form>
                 </div>
 
